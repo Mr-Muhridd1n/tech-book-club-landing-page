@@ -331,3 +331,49 @@
   text-align: center;
   color: $neutral-700;
 }
+
+@media screen and (max-width: 1010px) {
+  .hero__container {
+    flex-direction: column;
+    align-items: center;
+    gap: 4rem;
+  }
+
+  .grow-together__container {
+    flex-direction: column;
+    align-items: center;
+    gap: 4rem;
+  }
+
+  .book-club_container {
+    flex-direction: column;
+    align-items: center;
+    gap: 4rem;
+  }
+
+  .reading-journey {
+    display: none;
+  }
+
+  .options__list {
+    flex-wrap: wrap;
+  }
+
+  .options__item:nth-child(2) {
+    padding: 2.4rem;
+    width: 100%;
+    max-width: 286px;
+    background-color: $neutral-100;
+    background-image: url("../../images/pattern-glow.svg");
+    background-repeat: no-repeat;
+    background-position: top -202px left -24px;
+  }
+
+  .testemonials__container {
+    align-items: start;
+  }
+
+  .testemonials__caption {
+    text-align: left;
+  }
+}
