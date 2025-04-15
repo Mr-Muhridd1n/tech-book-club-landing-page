@@ -20,7 +20,6 @@
   margin-bottom: 6.4rem;
 }
 .footer__title {
-  font-family: $Martian_Mono;
   font-weight: 600;
   font-size: 5rem;
   line-height: 130%;
@@ -36,7 +35,6 @@
   margin-bottom: 2.4rem;
 
   & span {
-    font-family: $Martian_Mono;
     font-weight: 600;
     font-size: 1.8rem;
     line-height: 130%;
@@ -49,10 +47,15 @@
     background: $footer_btn_gardent;
   }
 }
+
+.footer_main__button:active {
+  box-shadow: 0px 0px 0px 5px $neutral-200, 0px 0px 0px 3px $neutral-900;
+}
+
 .footer_main__testemonials {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: $px-12;
 }
 .footer_main__testemonials__img-wrapper {
 }
@@ -60,7 +63,6 @@
 }
 .footer_main__testemonials-reating {
   & p {
-    font-family: $Martian_Mono;
     font-weight: 400;
     font-size: 1.4rem;
     line-height: 120%;
@@ -82,7 +84,6 @@
   padding-bottom: 2.4rem;
 
   & p {
-    font-family: $Martian_Mono;
     font-weight: 400;
     font-size: 1.4rem;
     line-height: 120%;

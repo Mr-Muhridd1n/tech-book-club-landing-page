@@ -1,5 +1,5 @@
 .grow-together {
-  margin-bottom: 12rem;
+  margin-bottom: $rem-12;
 }
 .grow-together__container {
   display: flex;
@@ -7,7 +7,7 @@
   align-items: center;
 }
 .grow-together-image_wrapper {
-  margin-right: 8rem;
+  margin-right: $rem-8;
 }
 .grow-together-image {
   border-radius: 12px;
@@ -15,7 +15,6 @@
 .grow-together-content {
 }
 .grow-together__title {
-  font-family: $Martian_Mono;
   font-weight: 600;
   font-size: 5rem;
   line-height: 130%;
@@ -44,7 +43,7 @@
   letter-spacing: -0.5px;
 }
 .book-club {
-  margin-bottom: 12rem;
+  margin-bottom: $rem-12;
   background-image: url("../../images/logos-tech.svg");
   background-repeat: no-repeat;
   background-position: bottom 31px center;
@@ -56,7 +55,7 @@
 .book-club__content {
   width: 100%;
   max-width: 530px;
-  margin-right: 8rem;
+  margin-right: $rem-8;
 }
 .book-club__title {
   font-weight: 600;
@@ -94,15 +93,16 @@
 }
 
 .reading-journey {
-  margin-bottom: 12rem;
+  margin-bottom: $rem-12;
 }
 .reading-journey__container {
-  background-image: url("../../images/pattern-light-bg.svg");
+  background-image: url("../../images/pattern-light-bg.svg"),
+    url("../../images/pattern-glow.svg");
   background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+  background-position: center, right -200px bottom -250px;
+  background-size: cover, 684px 684px;
   background-color: $neutral-100;
-  padding: 8rem 6rem;
+  padding: $rem-8 6rem;
   border-radius: 12px;
   overflow: hidden;
   display: flex;
@@ -114,10 +114,11 @@
   font-weight: 600;
   font-size: 5rem;
   line-height: 120%;
-  letter-spacing: -4%;
+  letter-spacing: -1px;
   color: $neutral-900;
   width: 100%;
   max-width: 512px;
+  text-align: center;
 }
 .reading-journey__list {
   display: flex;
@@ -169,30 +170,163 @@
   letter-spacing: -1%;
 }
 .options {
+  margin-bottom: $rem-12;
 }
 .options__container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  max-width: 970px;
 }
 .options__title {
+  font-weight: 600;
+  font-size: 5rem;
+  line-height: 130%;
+  letter-spacing: -2px;
+  text-align: center;
+  margin-bottom: 6.4rem;
 }
 .options__list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  width: 100%;
 }
 .options__item {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  border: 1px solid $neutral-200;
+  border-radius: 8px;
+
+  &:nth-child(2) {
+    padding: 4rem 2.4rem;
+    width: 100%;
+    max-width: 350px;
+    background-color: $neutral-100;
+    background-image: url("../../images/pattern-glow.svg");
+    background-repeat: no-repeat;
+    background-position: top -202px left -24px;
+  }
 }
+
+.options__item:nth-child(1),
+.options__item:nth-child(3) {
+  padding: 2.4rem;
+  width: 100%;
+  max-width: 286px;
+  background-color: $neutral-0;
+}
+
 .options__item__contents {
+  & hr {
+    margin-bottom: 2.4rem;
+  }
 }
 .options__item__title {
+  font-weight: 600;
+  font-size: 2.4rem;
+  line-height: 110%;
+  letter-spacing: -1px;
+  color: $neutral-900;
+  margin-bottom: 2.4rem;
 }
 .options__item__prise {
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  font-size: 3.4rem;
+  line-height: 130%;
+  letter-spacing: -1px;
+  color: $neutral-900;
+  margin-bottom: 2.4rem;
 }
+
+.options__item:nth-child(1) .options__item__prise::after,
+.options__item:nth-child(2) .options__item__prise::after {
+  content: "/month";
+  font-family: $Inter;
+  font-weight: 400;
+  font-size: 2rem;
+  line-height: 140%;
+  letter-spacing: -0.5px;
+  margin-left: 0.8rem;
+}
+
 .options__item__possibilities {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  & span {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  & span p {
+    font-family: $Inter;
+    font-weight: 400;
+    font-size: 2rem;
+    line-height: 140%;
+    letter-spacing: -0.5px;
+    color: $neutral-700;
+  }
 }
+
+.options__item_button {
+  @include btn;
+  background-color: $light-salmon-50;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  & span {
+    font-weight: 600;
+    font-size: 1.8rem;
+    line-height: 130%;
+    letter-spacing: -1px;
+    color: $neutral-900;
+  }
+  &:hover {
+    background: $gradient;
+  }
+
+  &:active {
+    box-shadow: 0px 0px 0px 5px $neutral-700, 0px 0px 0px 3px #ffffff;
+  }
+}
+
 .testemonials {
+  margin-bottom: $rem-12;
 }
 .testemonials__container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 32px;
+  margin-bottom: $rem-12;
 }
 .testemonials__stars__wrapper {
+  display: flex;
 }
 .testemonials__caption {
+  text-align: center;
+  font-weight: 600;
+  font-size: 3.4rem;
+  line-height: 130%;
+  letter-spacing: -1px;
+  color: $neutral-900;
 }
 .testemonials__name {
+  font-family: $Inter;
+  font-weight: 400;
+  font-size: 2rem;
+  line-height: 140%;
+  letter-spacing: -0.5px;
+  text-align: center;
+  color: $neutral-700;
 }

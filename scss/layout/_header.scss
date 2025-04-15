@@ -4,7 +4,7 @@
   background-repeat: no-repeat;
   background-position: center, bottom -240px right -472px;
   background-size: cover, 684px;
-  margin-bottom: 12rem;
+  margin-bottom: $rem-12;
 }
 .sitenav {
 }
@@ -29,12 +29,13 @@
   max-width: 570px;
 }
 .hero__title {
-  font-family: $Martian_Mono;
   font-weight: 700;
   font-size: 6.2rem;
   line-height: 120%;
   letter-spacing: -2px;
-  color: $gradient-text;
+  background: $gradient-text;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
   margin-bottom: 2.4rem;
 }
 .hero__descraption {
@@ -53,7 +54,6 @@
   margin-bottom: 2rem;
 
   & span {
-    font-family: $Martian_Mono;
     font-weight: 600;
     font-size: 1.8rem;
     line-height: 130%;
@@ -69,7 +69,7 @@
 .hero__testemonials {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: $px-12;
 }
 .hero__testemonials__img-wrapper {
 }
@@ -77,7 +77,6 @@
 }
 .hero__testemonials-reating {
   & p {
-    font-family: $Martian_Mono;
     font-weight: 400;
     font-size: 1.4rem;
     line-height: 120%;
@@ -91,7 +90,7 @@
   margin-bottom: 4px;
 }
 .hero__img_wrapper {
-  border-radius: 12px;
+  border-radius: $px-12;
   overflow: hidden;
 }
 .hero__img {
