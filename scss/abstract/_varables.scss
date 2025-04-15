@@ -17,7 +17,7 @@ $gradient: linear-gradient(90deg, #ffe2d1 0%, #fff5ef 100%);
 
 $footer_btn_gardent: linear-gradient(90deg, $neutral-700 0%, $neutral-900 100%);
 
-$Martian_Mono: "Martian Mono", sans-serif;
+$Martian_Mono: "Martian Mono", monospace;
 $Inter: "Inter", sans-serif;
 
 $rem-12: 12rem;
@@ -46,9 +46,4 @@ $radius-full: 9999px;
   border-radius: 8px;
   border: 2px solid $neutral-900;
   cursor: pointer;
-
-  // &:active {
-  //   box-shadow: 0px 0px 0px 5px $neutral-700;
-  //   box-shadow: 0px 0px 0px 3px $neutral-0;
-  // }
 }

@@ -52,6 +52,7 @@
   @include btn;
   background-color: $light-salmon-50;
   margin-bottom: 2rem;
+  width: max-content;
 
   & span {
     font-weight: 600;
@@ -64,6 +65,10 @@
 
   &:hover {
     background: $gradient;
+  }
+
+  &:active {
+    box-shadow: 0px 0px 0px 5px $neutral-700, 0px 0px 0px 3px #ffffff;
   }
 }
 .hero__testemonials {
