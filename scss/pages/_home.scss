@@ -63,10 +63,14 @@
   line-height: 130%;
   letter-spacing: -2px;
   color: $neutral-900;
-  background-image: url("../../images/pattern-circle.png");
-  background-repeat: no-repeat;
-  background-position: left 150px bottom;
   margin-bottom: 2.4rem;
+
+  span {
+    background-image: url("../../images/pattern-circle.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+  }
 }
 .book-club__descraption {
   font-family: $Inter;
@@ -301,6 +305,7 @@
 }
 
 .testemonials {
+  display: inline-block;
   margin-bottom: $rem-12;
 }
 .testemonials__container {
@@ -309,7 +314,6 @@
   justify-content: center;
   flex-direction: column;
   gap: 32px;
-  margin-bottom: $rem-12;
 }
 .testemonials__stars__wrapper {
   display: flex;
@@ -334,6 +338,7 @@
 
 @media screen and (max-width: 1010px) {
   .hero__container {
+    max-width: 100%;
     flex-direction: column;
     align-items: center;
     gap: 4rem;
@@ -341,7 +346,6 @@
 
   .grow-together__container {
     flex-direction: column;
-    align-items: center;
     gap: 4rem;
   }
 
@@ -375,5 +379,94 @@
 
   .testemonials__caption {
     text-align: left;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .grow-together {
+    margin-bottom: 6.7rem;
+  }
+
+  .grow-together__container {
+    align-items: start;
+    flex-direction: column-reverse;
+  }
+
+  .grow-together-image_wrapper {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .grow-together__list {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .book-club {
+    background-position: right 82.44px bottom 50.71px;
+    margin-bottom: 8rem;
+  }
+
+  .book-club_container {
+    align-items: start;
+  }
+
+  .book-club__content {
+    margin: 0;
+    max-width: 100%;
+  }
+
+  .book-club__title {
+    width: 100%;
+    max-width: 534px;
+  }
+
+  .options {
+    margin-bottom: 8rem;
+  }
+
+  .book-club-image {
+    width: 100%;
+    height: 100%;
+  }
+
+  .options__container {
+    align-items: start;
+  }
+
+  .options__title {
+    margin-bottom: 4rem;
+  }
+
+  .options__list {
+    justify-content: space-between;
+    flex-direction: row;
+    gap: 0;
+  }
+
+  .options__item {
+    &:nth-child(1),
+    &:nth-child(2),
+    &:nth-child(3) {
+      max-width: 340px;
+    }
+
+    &:nth-child(3) {
+      margin-top: 2.4rem;
+    }
+  }
+
+  .testemonials {
+    margin-bottom: 8rem;
+  }
+
+  .testemonials__container {
+    margin: 0;
   }
 }
